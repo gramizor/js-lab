@@ -1,13 +1,4 @@
 # js-lab
-<style>
-  p{
-  margin-bottom: 6px;
-  }
-  p span{
-    font-weight: 700;
-  }
-</style>
-
 <p>
 Этот веб-сервис предоставляет доступ к четырем программам<br>
 </p>
