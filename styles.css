@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: #2F70AF;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.content {
+    margin: 10px auto;
+    max-width: 1120px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: max-content;
+}
+
+#censor,
+#showcase,
+#spoiler,
+#todo {
+    display: none;
+}
+
+.box {
+    width: 100%;
+    max-width: 550px;
+    background: #02315E;
+    margin: 10px auto 0px;
+    padding: 20px 20px 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#main .box{
+    max-width: 1110px;
+}
+
+#main .text span{
+    font-weight: 700;
+}
+
+.text p{
+    margin-bottom: 7px;
+}
+
+h1 h2 {
+    text-align: center;
+    margin: 10px;
+}
+
+header {
+    margin: 30px auto;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.projects-btn {
+    border: none;
+    outline: none;
+    padding: 10px 30px;
+    background: #B9848C;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+.projects-btn:hover {
+    background: #91676d;
+}
+
+.text {
+    text-align: left;
+    font-style: italic;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.columns {
+    justify-content: space-between;
+    text-align: center;
+}
+
+.input-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #806491;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin: 15px 0;
+}
+
+.input-area:hover {
+    background-color: #604b6d;
+}
+
+input {
+    flex: 1;
+    border: none;
+    border-radius: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    color: #fff;
+}
+
+input::placeholder {
+    color: #d4d4d4;
+    font-style: italic;
+}
+
+.add-btn {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #B9848C;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.add-btn:hover {
+    background: #91676d;
+}
+
+ul li {
+    list-style: none;
+    font-size: 20px;
+    padding: 0 0 10px;
+    user-select: none;
+    position: relative;
+    color: #fff;
+    margin: 10px 0;
+}
+
+ul li img {
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -10px;
+    left: 90%;
+    cursor: pointer;
+    border: 2px solid;
+    border-radius: 10px;
+    background-color: #2F70AF;
+}
+
+ul li img:hover {
+    border-radius: 40px;
+    background-color: #2F70AF;
+}

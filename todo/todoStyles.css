@@ -1,0 +1,152 @@
+.todo-h2 {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.btn-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.dop-btn {
+    border: none;
+    outline: none;
+    background: #B9848C;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    margin: 5px;
+    min-width: 155px;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.dop-btn:hover {
+    background: #91676d;
+}
+
+.hidden {
+    display: none;
+}
+
+.todo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    width: 510px;
+}
+
+.show-btn {
+    border: none;
+    outline: none;
+    background: #B9848C;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 40px;
+    margin: 10px 5px 7px;
+    min-width: 135px;
+    padding: 16px;
+    font-weight: 600;
+}
+
+.show-btn:hover {
+    background: #91676d;
+}
+
+.add-task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #806491;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin: 20px 0px;
+}
+
+.add-task:hover {
+    background-color: #604b6d;
+}
+
+#new-task {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    color: #fff;
+}
+
+#all-tasks li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    color: #fff;
+}
+
+#all-tasks li::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-image: url(img/empty.png);
+    background-size: cover;
+    background-position: center;
+    top: 11px;
+    left: 20px;
+}
+
+.highlighted {
+    background-color: #806491;
+}
+
+#all-tasks li.done {
+    color: #2b2b2b;
+    text-decoration: line-through;
+}
+
+#all-tasks li.done::before {
+    background-image: url(img/done.png);
+}
+
+#all-tasks li span {
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: 1px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+#all-tasks li span:hover {
+    background: #2F70AF;
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS case lab</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/todo/todoStyles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 class="header">case lab javascript</h1>
+            <button onclick="showCensor()" class="projects-btn">Censor</button>
+            <button onclick="showCase()" class="projects-btn">Showcase</button>
+            <button onclick="showSpoiler()" class="projects-btn">Spoiler</button>
+            <button onclick="showTodo()" class="projects-btn">Todo list</button>
+        </header>
+
+        <div class="content" id="main">
+            <div class="box">
+                <h1>Project information</h1>
+                <div class="text">
+                    <p>
+                        Этот веб-сервис предоставляет доступ к четырем программам<br>
+                    </p>
+                    <p>
+                        <span>Censor</span> - Эта программа фильтрует нежелательные слова в комментариях и предоставляет
+                        администраторам возможность управлять фильтром.<br>
+                    </p>
+                    <p>
+                        <span>Showcase</span> -<br>
+                    </p>
+                    <p>
+                        <span>Spoiler</span> -<br>
+                    </p>
+                    <p>
+                        <span>Todo List</span> - Проект предоставляет возможность создавать, управлять и отслеживать
+                        задачи.
+                        Пользователи могут создавать, отмечать выполненные задачи, выделять и снимать выделения, а также
+                        быстро удалять выполненные задачи. Все данные хранятся локально в браузере пользователя для
+                        надежности и доступности.<br>
+                    </p>
+                    <p>
+                        Ваши выборы и настройки для каждой программы сохраняются в сессионном хранилище браузера. Это
+                        означает, что даже после перезагрузки страницы ваши предпочтения будут восстановлены, и вы
+                        сможете
+                        продолжить работу с теми же программами, с которых завершили в прошлый раз. Главная страница
+                        будет
+                        доступна только после полного закрытия и повторного открытия вашей страницы, но данные, которые
+                        вы
+                        сохраняются в программе будут сохраняться даже после такой перезагрузки.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content" id="censor">
+            <div class="box">
+                <h1>Case censor</h1>
+                <div class="text">
+                    <p>
+                        На данном веб-ресурсе имеется функционал, который позволяет добавлять комментарии и
+                        устанавливать фильтр на нежелательные слова с их автоматической заменой в тексте
+                        пользовательских отзывов.<br>
+                    </p>
+                    <p>
+                        Представлена демонстрационная версия, и в дальнейшем, администраторам будет предоставлена
+                        возможность управлять заменами слов, тогда как возможность оставления комментариев останется
+                        доступной для всех пользователей.<br>
+                    </p>
+                    <p>
+                        Данные хранятся в localstorage,в дальнейшем можно перенести в базу данных.
+                    </p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="columns">
+                    <div class="comments">
+                        <h2>Добавьте комментарий</h2>
+                        <div class="input-area">
+                            <input type="text" id="new-comment" placeholder="Введите текст...">
+                            <button onclick="addComment()" class="add-btn">Добавить</button>
+                        </div>
+                        <ul id="comment-list"></ul>
+                    </div>
+                    <div class="replacements">
+                        <h2>Добавьте замены</h2>
+                        <div class="input-area">
+                            <input type="text" id="new-replacement" placeholder="Слово 1 [пробел] Слово 2">
+                            <button onclick="addReplacement()" class="add-btn">Добавить</button>
+                        </div>
+                        <ul id="replacement-list"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content" id="showcase">
+            <div class="box">
+                <h1>Case showcase</h1>
+                <div class="text">
+
+                </div>
+            </div>
+            <div class="box">
+
+            </div>
+        </div>
+
+
+        <div class="content" id="spoiler">
+            <div class="box">
+                <h1>Case spoiler</h1>
+                <div class="text">
+
+                </div>
+            </div>
+            <div class="box">
+
+            </div>
+        </div>
+
+
+
+
+        <div class="content" id="todo">
+            <div class="box">
+                <h1>Case todolist</h1>
+                <div class="text">
+                    <p>
+                        Проект предоставляет пользователям возможность создавать, управлять и отслеживать свой список
+                        задач. Можно легко создавать новые задачи, отмечать их как выполненные, выделять четные или
+                        нечетные задачи, а также снимать эти выделения.
+                    </p>
+                    <p>
+                        Проект также позволяет быстро удалять выполненные задачи, что помогает держать список актуальным
+                        и чистым.
+                    </p>
+                    <p>
+                        Важно отметить, что все данные, включая задачи и настройки, хранятся локально в браузере
+                        пользователя, обеспечивая сохранность данных и доступ к ним в любое время. Интерфейс проекта
+                        интуитивно понятен и удобен в использовании, что делает управление задачами приятным и
+                        эффективным.
+                    </p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="todo-header">
+                    <div class="header-content">
+                        <h2 class="todo-h2"><img src="/todo/img/tasks.png" alt="tasks icon" class="todo-img">Какие планы
+                            на сегодня?</h2>
+                        <button onclick="showBtn()" class="show-btn">Доп. кнопки</button>
+                    </div>
+                </div>
+                <div class="btn-section">
+                    <div class="btn-row">
+                        <button onclick="deleteLast()" class="dop-btn hidden">удалить<br>последний</button>
+                        <button onclick="deleteFirst()" class="dop-btn hidden">удалить<br>первый</button>
+                        <button onclick="delDone()" class="dop-btn hidden">удалить<br>сделанные</button>
+                        <button onclick="even()" class="dop-btn hidden">выделить<br>четные</button>
+                        <button onclick="odd()" class="dop-btn hidden">выделить<br>нечетные</button>
+                        <button onclick="clearHighlight()" class="dop-btn hidden">снять<br>выделения</button>
+                    </div>
+                </div>
+                <div class="add-task">
+                    <input type="text" id="new-task" placeholder="Введите цель...">
+                    <button onclick="addBtn()" class="add-btn">Добавить</button>
+                </div>
+                <ul id="all-tasks"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="/censor/script.js"></script>
+    <script src="/censor/censor.js"></script>
+    <script src="/projectsBtn.js"></script>
+    <script src="/todo/script.js"></script>
+</body>
+
+</html>
