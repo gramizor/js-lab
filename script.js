@@ -70,7 +70,7 @@ function showComment(commentsArray) { // отображает комментар
     appliedComments.forEach((comment, index) => {
         let li = document.createElement("li");
         let img = document.createElement("img");
-        img.src = "/src/delete-icon.png";
+        img.src = "src/delete-icon.png";
         img.alt = "удалить элемент";
 
         img.addEventListener("click", function () {
@@ -158,7 +158,7 @@ function showReplacement(replacementsArray) { //отображает замен�
     replacementsArray.forEach(replacementValue => {
         let li = document.createElement("li");
         let img = document.createElement("img");
-        img.src = "/src/delete-icon.png";
+        img.src = "src/delete-icon.png";
         img.alt = "удалить элемент";
 
         img.addEventListener("click", function () {

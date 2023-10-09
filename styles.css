@@ -40,15 +40,15 @@
     text-align: center;
 }
 
-#main .box{
+#main .box {
     max-width: 1110px;
 }
 
-#main .text span{
+#main .text span {
     font-weight: 700;
 }
 
-.text p{
+.text p {
     margin-bottom: 7px;
 }
 
@@ -166,4 +166,79 @@ ul li img {
 ul li img:hover {
     border-radius: 40px;
     background-color: #2F70AF;
+}
+
+.shop {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.product {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: #806491;
+}
+
+.product:hover{
+    background-color: #604b6d;
+}
+
+.product h2 {
+    margin: 0;
+}
+
+hr{
+    margin: 5px 0;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.product-btn {
+    padding: 0.5rem 1rem;
+    background-color: #B9848C;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-btn:hover {
+    background-color: #91676d;
+}
+
+#basket-items {
+    display: flex;
+    align-items: center;
+}
+
+.basket-list {
+    list-style: none;
+    padding: 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.basket-list li {
+    text-decoration: underline;
+    padding: 10px;
+    border-radius: 40px;
+    margin: 5px auto;
+}
+
+.basket-list li:hover{
+    background-color: #2F70AF;
+}
+
+.basket h3{
+    margin-top: 5px;
 }

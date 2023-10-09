@@ -106,7 +106,29 @@
                 </div>
             </div>
             <div class="box">
-
+                <div class="shop">
+                    <div class="product">
+                        <h3>Lenovo Yoga</h3>
+                        <p>Price: <span class="price">3000</span></p>
+                        <button onclick="addToBasket(1)" class="product-btn">Buy</button>
+                    </div>
+                    <div class="product">
+                        <h3>Acer Aspire</h3>
+                        <p>Price: <span class="price">1800</span></p>
+                        <button onclick="addToBasket(2)" class="product-btn">Buy</button>
+                    </div>
+                    <div class="product">
+                        <h3>Dell Vostro</h3>
+                        <p>Price: <span class="price">3400</span></p>
+                        <button onclick="addToBasket(3)" class="product-btn">Buy</button>
+                    </div>
+                </div>
+                <hr>
+                <div class="basket">
+                    <h2 style="text-align: center;">Cart</h2>
+                    <ul id="basket-items" class="basket-list"></ul>
+                    <h3 style="text-align: center;">Total price: <span id="total">0</span></h3>
+                </div>
             </div>
         </div>
 
@@ -176,6 +198,7 @@
     <script src="script.js"></script>
     <script src="censor/censor.js"></script>
     <script src="todo/script.js"></script>
+    <script src="/showcase/app.js"></script>
 </body>
 
 </html>
