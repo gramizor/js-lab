@@ -28,7 +28,8 @@
 #censor,
 #showcase,
 #spoiler,
-#todo {
+#todo,
+#todoServer {
     display: none;
 }
 
@@ -110,7 +111,10 @@ header {
     background-color: #604b6d;
 }
 
-input {
+#new-comment,
+#new-replacement,
+#new-task,
+#new-todo {
     flex: 1;
     border: none;
     border-radius: none;
@@ -120,7 +124,10 @@ input {
     color: #fff;
 }
 
-input::placeholder {
+#new-comment::placeholder,
+#new-replacement::placeholder,
+#new-task::placeholder,
+#new-todo::placeholder {
     color: #d4d4d4;
     font-style: italic;
 }
@@ -144,7 +151,9 @@ input::placeholder {
     background: #91676d;
 }
 
-ul li {
+#comment-list,
+#replacement-list,
+#all-tasks{
     list-style: none;
     font-size: 20px;
     padding: 0 0 10px;
@@ -154,7 +163,7 @@ ul li {
     margin: 10px 0;
 }
 
-ul li img {
+#delete-img {
     padding: 5px;
     width: 40px;
     height: 40px;
@@ -167,7 +176,7 @@ ul li img {
     background-color: #2F70AF;
 }
 
-ul li img:hover {
+#delete-img:hover {
     border-radius: 40px;
     background-color: #2F70AF;
 }
@@ -249,7 +258,7 @@ hr {
     margin-top: 5px;
 }
 
-/* censor styles */
+/* spoiler styles */
 
 #myBtn {
     padding: 0.5rem 1rem;
@@ -266,4 +275,101 @@ hr {
     display: none;
     text-align: center;
     padding: 1rem;
+}
+
+form {
+    width: 500px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form input,
+form select {
+    padding: 0.5rem 1rem;
+}
+
+input[type="text"] {
+    width: 100%;
+}
+
+form>button {
+    cursor: pointer;
+    background-color: #B9848C;
+    color: white;
+    border: none;
+    padding: 0.5rem 0.8rem;
+}
+
+form>button:hover {
+    background-color: #91676d;
+}
+
+#todo-list ul {
+    list-style: none;
+    width: 500px;
+    margin: 2rem auto;
+    padding: 0;
+}
+
+.todo-item {
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem 0;
+}
+
+.todo-text {
+    flex-grow: 1;
+}
+
+.close {
+    color: red;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.close:hover {
+    color: tomato;
+}
+
+
+#new-todo {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #806491;
+    border-radius: 30px;
+    padding-left: 20px;
+}
+
+form select {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    background: #806491;
+}
+
+form select::placeholder {
+    color: #d4d4d4;
+    font-style: italic;
+}
+
+form select::-ms-expand,
+form select::-webkit-select {
+    display: none;
+}
+
+
+form select:hover {
+    background-color: #604b6d;
 }

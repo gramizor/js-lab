@@ -16,7 +16,8 @@
             <button onclick="showCensor()" class="projects-btn">Censor</button>
             <button onclick="showCase()" class="projects-btn">Showcase</button>
             <button onclick="showSpoiler()" class="projects-btn">Spoiler</button>
-            <button onclick="showTodo()" class="projects-btn">Todo list</button>
+            <button onclick="showLocalTodo()" class="projects-btn">Local todo</button>
+            <button onclick="showServerTodo()" class="projects-btn">Server todo</button>
         </header>
 
         <div class="content" id="main">
@@ -41,11 +42,18 @@
                         для спойлеров и скрытия информации.<br>
                     </p>
                     <p>
-                        <span>Todo List</span> - Проект предоставляет возможность создавать, управлять и отслеживать
+                        <span>Local todo list</span> - Проект предоставляет возможность создавать, управлять и
+                        отслеживать
                         задачи.
                         Пользователи могут создавать, отмечать выполненные задачи, выделять и снимать выделения, а также
                         быстро удалять выполненные задачи. Все данные хранятся локально в браузере пользователя для
                         надежности и доступности.<br>
+                    </p>
+                    <p>
+                        <span>Server todo</span> - удобный веб-сервис для создания, управления и отслеживания задач.
+                        Выбирайте пользователя, добавляйте, удаляйте и отмечайте задачи как выполненные. Все данные
+                        надежно хранятся на сервере, доступны всегда. Управляйте своими делами с Server todo!
+                    </p>
                     </p>
                     <p>
                         Ваши выборы и настройки для каждой программы сохраняются в сессионном хранилище браузера. Это
@@ -142,7 +150,6 @@
             </div>
         </div>
 
-
         <div class="content" id="spoiler">
             <div class="box">
                 <h1>Case spoiler</h1>
@@ -167,9 +174,6 @@
                 </div>
             </div>
         </div>
-
-
-
 
         <div class="content" id="todo">
             <div class="box">
@@ -217,12 +221,39 @@
                 <ul id="all-tasks"></ul>
             </div>
         </div>
+
+        <div class="content" id="todoServer">
+            <div class="box">
+                <h1>Case server todo</h1>
+                <div class="text">
+                    <p>
+                        Server todo - удобный веб-сервис для создания, управления и отслеживания задач. Выбирайте
+                        пользователя, добавляйте, удаляйте и отмечайте задачи как выполненные. Все данные надежно
+                        хранятся на сервере, доступны всегда. Управляйте своими делами с Server todo!
+                    </p>
+                </div>
+            </div>
+            <div class="box">
+                <form autocomplete="off">
+                    <label>
+                        <input id="new-todo" name="todo" type="text" placeholder="new todo" />
+                    </label>
+                    <select id="user-todo" name="user">
+                        <option disabled selected>select user</option>
+                    </select>
+                    <button>Add Todo</button>
+                </form>
+                <ul id="todo-list"></ul>
+            </div>
+        </div>
+
     </div>
     <script src="script.js"></script>
     <script src="censor/censor.js"></script>
     <script src="todo/script.js"></script>
     <script src="showcase/app.js"></script>
     <script src="spoiler/app.js"></script>
+    <script src="todo_server/app.js"></script>
 </body>
 
 </html>

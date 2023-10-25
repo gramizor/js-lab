@@ -1,8 +1,3 @@
-// Дополнительное задание
-// изначально пробовал делать, используя написанный ранее censor, но столкнулся с проблемой, что если добавить замену,
-// удалить ее и без перезагрузки страницы написать комментарий, то она не удалится из памяти браузера и изменит комментарий. 
-// фиксилось только перезагрузкой страницы, поэтому я решил сделать через map
-
 let replacements = new Map();
 let comments = new Map();
 const commentInput = document.getElementById("new-comment");
@@ -72,6 +67,7 @@ function showComment(commentsArray) { // отображает комментар
         let img = document.createElement("img");
         img.src = "src/delete-icon.png";
         img.alt = "удалить элемент";
+        img.id = "delete-img";
 
         img.addEventListener("click", function () {
             commentsArray = commentsArray.filter((_, i) => i !== index);
@@ -160,6 +156,7 @@ function showReplacement(replacementsArray) { //отображает замен�
         let img = document.createElement("img");
         img.src = "src/delete-icon.png";
         img.alt = "удалить элемент";
+        img.id = "delete-img";
 
         img.addEventListener("click", function () {
             replacementsArray = replacementsArray.filter(replacement => replacement !== replacementValue);
@@ -188,6 +185,7 @@ function showCensor() {
     setElementStatus('showcase', 'none');
     setElementStatus('spoiler', 'none');
     setElementStatus('todo', 'none');
+    setElementStatus('todoServer', 'none');
     setElementStatus('main', 'none');
 }
 
@@ -196,6 +194,7 @@ function showCase() {
     setElementStatus('showcase', 'flex');
     setElementStatus('spoiler', 'none');
     setElementStatus('todo', 'none');
+    setElementStatus('todoServer', 'none');
     setElementStatus('main', 'none');
 }
 
@@ -204,14 +203,25 @@ function showSpoiler() {
     setElementStatus('showcase', 'none');
     setElementStatus('spoiler', 'flex');
     setElementStatus('todo', 'none');
+    setElementStatus('todoServer', 'none');
     setElementStatus('main', 'none');
 }
 
-function showTodo() {
+function showLocalTodo() {
     setElementStatus('censor', 'none');
     setElementStatus('showcase', 'none');
     setElementStatus('spoiler', 'none');
     setElementStatus('todo', 'flex');
+    setElementStatus('todoServer', 'none');
+    setElementStatus('main', 'none');
+}
+
+function showServerTodo() {
+    setElementStatus('censor', 'none');
+    setElementStatus('showcase', 'none');
+    setElementStatus('spoiler', 'none');
+    setElementStatus('todo', 'none');
+    setElementStatus('todoServer', 'flex');
     setElementStatus('main', 'none');
 }
 
