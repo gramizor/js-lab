@@ -13,3 +13,5 @@ Server todo - удобный веб-сервис для создания, упр
 <p>
 https://gramizor.github.io/js-lab/
 </p>
+
+Стэк:
